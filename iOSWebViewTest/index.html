@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>测试iOS与JS之前的互调</title>
+        <style type="text/css">
+            * {
+                font-size: 40px;
+            }
+        </style>
+        <script type="text/javascript">
+            function showAppAlertMsg(message){
+<!--                    alert(message);-->
+                    window.appWebViewBack();
+            }
+        </script>
+    </head>
+    <body>
+        <div style="margin-top: 100px">
+            <input type="button" value="touch me back" onclick="showAppAlertMsg()">
+        </div>
+    </body>
+</html>
